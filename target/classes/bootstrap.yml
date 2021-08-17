@@ -1,5 +1,10 @@
 spring:
+  config:
+    import: configserver:https://cloud-config-server-m.herokuapp.com/
+
   cloud:
     config:
       enabled: true
-      uri: http://localhost:9296
+
+      name: user
+      profile: prod
