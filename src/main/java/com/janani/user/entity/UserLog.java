@@ -7,17 +7,16 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user")
-public class User {
+@Data
+@Table(name = "user_log")
+public class UserLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private int status;
     private Long departmentId;
+
 }

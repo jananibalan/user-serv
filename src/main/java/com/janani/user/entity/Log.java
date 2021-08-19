@@ -10,14 +10,12 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user")
-public class User {
+@Table(name = "log")
+public class Log {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private Long departmentId;
+    private String path;
+    private int status;
 }
